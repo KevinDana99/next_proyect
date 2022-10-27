@@ -1,14 +1,14 @@
-import Link from 'next/link'
+
 import React from 'react'
+import ContactList from '../../src/components/lists/ContactList'
+import { Container } from './styled'
 
 const Contacts = () => {
   return (
-    <div>
-        <Link href={'/home'}>
-     Go to home
-            </Link>
+    <Container>
+<ContactList/>
 
-    </div>
+    </Container>
   )
 }
 

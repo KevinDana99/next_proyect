@@ -1,18 +1,20 @@
 import Link from 'next/link'
 import React from 'react'
-import { Container } from './styled'
+import { Container,Linked } from './styled'
+import { IoPeopleOutline, IoPersonOutline,IoHomeOutline, IoArrowBack } from "react-icons/io5";
+import { useRouter } from 'next/router';
+import Image from 'next/image';
 
-const Navbar = () => {
+const Nabvar = () => {
+  const router = useRouter();
   return (
  <Container>
-    
-    <Link href={'/contacts'}>Contacts</Link>
-<Link href={'/about'}>About</Link>
-<Link href={'/profile'}>contacts</Link>
-<Link href={'/home'}>home</Link>
+
+
+{router.pathname != '/home' ? <Linked onClick={router.back}><IoArrowBack/></Linked> : <Image src={'/assets/logo.png'} alt='' width={70} height={33}/>}
 
  </Container>
   )
 }
 
-export default Navbar
+export default Nabvar

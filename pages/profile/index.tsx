@@ -1,8 +1,12 @@
 import React from 'react'
+import CardProfile from '../../src/components/carda/CardProfile'
+import { Container } from './styled'
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <Container>
+<CardProfile/>
+</Container>
   )
 }
 
